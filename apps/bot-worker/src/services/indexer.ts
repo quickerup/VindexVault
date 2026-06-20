@@ -1,4 +1,4 @@
-import { ThreatReport, GraphLink } from "../../../packages/shared-types";
+import { ThreatReport, GraphLink } from "../../../../packages/shared-types";
 
 const reports: ThreatReport[] = [];
 const links: GraphLink[] = [];

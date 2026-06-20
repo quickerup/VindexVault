@@ -8,7 +8,8 @@
     "allowJs": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "ignoreDeprecations": "5107"
   },
   "include": ["src/**/*.ts"]
 }
