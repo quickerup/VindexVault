@@ -1,0 +1,135 @@
+#pragma version =0.4.6;
+#pragma allow-post-modification;
+#pragma compute-asm-ltr;
+
+;; messages_Messages.headers.fc
+;;
+;; Header files for Messages
+;; NOTE: declarations are sorted for optimal order
+;;
+
+;; $Messages$_store
+builder $Messages$_store(builder build_0, (int) v) inline;
+
+;; $Messages$_load
+(slice, ((int))) $Messages$_load(slice sc_0) inline;
+
+;; $Messages$_contract_init
+(int) $Messages$_contract_init() impure inline;
+
+;; $Messages$_contract_load
+(int) $Messages$_contract_load() impure inline;
+
+;; $Messages$_contract_store
+() $Messages$_contract_store((int) v) impure inline;
+
+;; $Messages$_fun_version
+((int), int) $Messages$_fun_version((int) $self) impure inline_ref;
+
+
+;; messages_Messages.stdlib.fc
+global (int, slice, int, slice) __tact_context;
+global slice __tact_context_sender;
+global cell __tact_child_contract_codes;
+global int __tact_randomized;
+
+;; messages_Messages.storage.fc
+;;
+;; Type: Messages
+;; TLB: _ versionValue:int257 = Messages
+;;
+
+builder $Messages$_store(builder build_0, (int) v) inline {
+    var (v'versionValue) = v;
+    build_0 = build_0.store_int(v'versionValue, 257);
+    return build_0;
+}
+
+(slice, ((int))) $Messages$_load(slice sc_0) inline {
+    var v'versionValue = sc_0~load_int(257);
+    return (sc_0, (v'versionValue));
+}
+
+(int) $Messages$_contract_load() impure inline {
+    slice $sc = get_data().begin_parse();
+    int $loaded = $sc~load_int(1);
+    if ($loaded) {
+        return $sc~$Messages$_load();
+    }
+    else {
+        return $Messages$_contract_init();
+    }
+}
+
+() $Messages$_contract_store((int) v) impure inline {
+    builder b = begin_cell();
+    b = b.store_int(true, 1);
+    b = $Messages$_store(b, v);
+    set_data(b.end_cell());
+}
+
+;;
+;; Contract Messages functions
+;;
+
+(int) $Messages$_contract_init() impure inline {
+    var (($self'versionValue)) = (1);
+    return ($self'versionValue);
+}
+
+((int), int) $Messages$_fun_version((int) $self) impure inline_ref {
+    var (($self'versionValue)) = $self;
+    var $fresh$ret_15 = $self'versionValue;
+    return (($self'versionValue), $fresh$ret_15);
+}
+
+;;
+;; Get methods of a Contract Messages
+;;
+
+_ %version() method_id(76407) {
+    var self = $Messages$_contract_load();
+    var res = self~$Messages$_fun_version();
+    return res;
+}
+
+;;
+;; Routing of a Contract Messages
+;;
+
+;; message opcode reader utility: only binary receivers
+;; Returns 32 bit message opcode, otherwise throws the "Invalid incoming message" exit code
+(slice, int) ~load_opcode_internal(slice s) asm( -> 1 0) "32 LDUQ 130 THROWIFNOT";
+
+() recv_internal(int msg_value, cell in_msg_cell, slice in_msg) impure {
+    
+    ;; Context
+    var cs = in_msg_cell.begin_parse();
+    cs~skip_bits(2);
+    var msg_bounceable = cs~load_int(1);
+    var msg_bounced = cs~load_int(1);
+    slice msg_sender_addr = cs~load_msg_addr();
+    __tact_context = (msg_bounceable, msg_sender_addr, msg_value, cs);
+    __tact_context_sender = msg_sender_addr;
+    
+    ;; Load contract data
+    var ($self'versionValue) = $Messages$_contract_load();
+    
+    ;; Handle bounced messages
+    if (msg_bounced) { return (); }
+    int op = 0;
+    int in_msg_length = slice_bits(in_msg);
+    if (in_msg_length >= 32) {
+        op = in_msg~load_uint(32);
+    }
+    ;; Empty Receiver and Text Receivers
+    var text_op = slice_hash(in_msg);
+    ;; Receive "tick" message
+    if (text_op == 0x3d42a0ed0847161ee0c76a0899a9a4d1fa4cebb370fff1de07ef3b1a261fa9c5) {
+        $self'versionValue = $self'versionValue + 1;
+        $Messages$_contract_store(($self'versionValue));
+        return ();
+    }
+    ;; Throw if not handled
+    throw(130);
+}

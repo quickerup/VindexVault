@@ -1,0 +1,119 @@
+// automatically generated from `@stdlib/std/stdlib.fc` `/data/data/com.termux/files/home/vindex-vault/apps/contracts/output/reputation_Reputation.fc` 
+PROGRAM{
+  DECLPROC $Reputation$_store
+  DECLPROC $Reputation$_load
+  DECLPROC $Reputation$init$_load
+  DECLPROC $Reputation$_contract_init
+  DECLPROC $Reputation$_contract_load
+  DECLPROC $Reputation$_contract_store
+  DECLPROC $Reputation$_fun_owner
+  DECLPROC $Reputation$_fun_score
+  83229 DECLMETHOD %owner
+  119864 DECLMETHOD %score
+  DECLPROC recv_internal
+  DECLGLOBVAR __tact_context
+  DECLGLOBVAR __tact_context_sender
+  DECLGLOBVAR __tact_child_contract_codes
+  DECLGLOBVAR __tact_randomized
+  $Reputation$_store PROCINLINE:<{
+    s0 s2 XCHG
+    STSLICE
+    257 PUSHINT
+    STIX
+  }>
+  $Reputation$_load PROCINLINE:<{
+    LDMSGADDR
+    257 PUSHINT
+    LDIX
+    -ROT
+  }>
+  $Reputation$init$_load PROCINLINE:<{
+    LDMSGADDR
+    SWAP
+  }>
+  $Reputation$_contract_init PROCINLINE:<{
+    0 PUSHINT
+  }>
+  $Reputation$_contract_load PROCINLINE:<{
+    c4 PUSH
+    CTOS
+    1 LDI
+    SWAP
+    IF:<{
+      $Reputation$_load INLINECALLDICT
+      1 2 BLKDROP2
+    }>ELSE<{
+      $Reputation$init$_load INLINECALLDICT
+      SWAP
+      ENDS
+      $Reputation$_contract_init INLINECALLDICT
+    }>
+  }>
+  $Reputation$_contract_store PROCINLINE:<{
+    NEWC
+    TRUE
+    SWAP
+    1 STI
+    -ROT
+    $Reputation$_store INLINECALLDICT
+    ENDC
+    c4 POP
+  }>
+  $Reputation$_fun_owner PROCREF:<{
+    OVER
+  }>
+  $Reputation$_fun_score PROCREF:<{
+    DUP
+  }>
+  %owner PROC:<{
+    $Reputation$_contract_load INLINECALLDICT
+    $Reputation$_fun_owner INLINECALLDICT
+    2 1 BLKDROP2
+  }>
+  %score PROC:<{
+    $Reputation$_contract_load INLINECALLDICT
+    $Reputation$_fun_score INLINECALLDICT
+    2 1 BLKDROP2
+  }>
+  recv_internal PROC:<{
+    SWAP
+    CTOS
+    2 PUSHINT
+    SDSKIPFIRST
+    1 LDI
+    1 LDI
+    LDMSGADDR
+    OVER
+    s3 s4 XCHG
+    s6 s6 XCHG2
+    4 TUPLE
+    __tact_context SETGLOB
+    s0 s2 XCHG
+    __tact_context_sender SETGLOB
+    $Reputation$_contract_load INLINECALLDICT
+    s0 s3 XCHG
+    IFJMP:<{
+      3 BLKDROP
+    }>
+    OVER
+    SBITS
+    31 GTINT
+    IF:<{
+      SWAP
+      32 LDU
+      NIP
+      SWAP
+    }>
+    SWAP
+    HASHSU
+    94302520493244666397713573998619641843265902395491362666158135417408654656556 PUSHINT
+    EQUAL
+    IFJMP:<{
+      SWAP
+      INC
+      $Reputation$_contract_store INLINECALLDICT
+    }>
+    2DROP
+    130 THROW
+  }>
+}END>c

@@ -1,0 +1,96 @@
+// automatically generated from `@stdlib/std/stdlib.fc` `/data/data/com.termux/files/home/vindex-vault/apps/contracts/output/messages_Messages.fc` 
+PROGRAM{
+  DECLPROC $Messages$_store
+  DECLPROC $Messages$_load
+  DECLPROC $Messages$_contract_init
+  DECLPROC $Messages$_contract_load
+  DECLPROC $Messages$_contract_store
+  DECLPROC $Messages$_fun_version
+  76407 DECLMETHOD %version
+  DECLPROC recv_internal
+  DECLGLOBVAR __tact_context
+  DECLGLOBVAR __tact_context_sender
+  DECLGLOBVAR __tact_child_contract_codes
+  DECLGLOBVAR __tact_randomized
+  $Messages$_store PROCINLINE:<{
+    SWAP
+    257 PUSHINT
+    STIX
+  }>
+  $Messages$_load PROCINLINE:<{
+    257 PUSHINT
+    LDIX
+    SWAP
+  }>
+  $Messages$_contract_init PROCINLINE:<{
+    1 PUSHINT
+  }>
+  $Messages$_contract_load PROCINLINE:<{
+    c4 PUSH
+    CTOS
+    1 LDI
+    SWAP
+    IF:<{
+      $Messages$_load INLINECALLDICT
+      NIP
+    }>ELSE<{
+      DROP
+      $Messages$_contract_init INLINECALLDICT
+    }>
+  }>
+  $Messages$_contract_store PROCINLINE:<{
+    NEWC
+    TRUE
+    SWAP
+    1 STI
+    SWAP
+    $Messages$_store INLINECALLDICT
+    ENDC
+    c4 POP
+  }>
+  $Messages$_fun_version PROCREF:<{
+    DUP
+  }>
+  %version PROC:<{
+    $Messages$_contract_load INLINECALLDICT
+    $Messages$_fun_version INLINECALLDICT
+    NIP
+  }>
+  recv_internal PROC:<{
+    SWAP
+    CTOS
+    2 PUSHINT
+    SDSKIPFIRST
+    1 LDI
+    1 LDI
+    LDMSGADDR
+    OVER
+    s3 s4 XCHG
+    s6 s6 XCHG2
+    4 TUPLE
+    __tact_context SETGLOB
+    s0 s2 XCHG
+    __tact_context_sender SETGLOB
+    $Messages$_contract_load INLINECALLDICT
+    s0 s2 XCHG
+    IFJMP:<{
+      2DROP
+    }>
+    DUP
+    SBITS
+    31 GTINT
+    IF:<{
+      32 LDU
+      NIP
+    }>
+    HASHSU
+    27708806339649211247135391067519635518433107351107800299478182363988133652933 PUSHINT
+    EQUAL
+    IFJMP:<{
+      INC
+      $Messages$_contract_store INLINECALLDICT
+    }>
+    DROP
+    130 THROW
+  }>
+}END>c

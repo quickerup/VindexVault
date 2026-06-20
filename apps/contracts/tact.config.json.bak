@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "name": "registry",
+      "path": "./contracts/core/registry.tact",
+      "output": "./output",
+      "options": { "debug": false }
+    }
+  ]
+}

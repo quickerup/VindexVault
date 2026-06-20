@@ -1,0 +1,36 @@
+{
+  "wallet": "EQAF8wfP5lVcgAHpH8eW18bYMagteW9kVit_KRharLjKR5sS",
+  "results": [
+    {
+      "name": "registry",
+      "status": "sent",
+      "timestamp": 1781952772794
+    },
+    {
+      "name": "reputation",
+      "status": "sent",
+      "timestamp": 1781952779496
+    },
+    {
+      "name": "reward_engine",
+      "status": "sent",
+      "timestamp": 1781952784253
+    },
+    {
+      "name": "staking",
+      "status": "sent",
+      "timestamp": 1781952788860
+    },
+    {
+      "name": "treasury",
+      "status": "sent",
+      "timestamp": 1781952793511
+    },
+    {
+      "name": "jetton_master",
+      "status": "sent",
+      "timestamp": 1781952798128
+    }
+  ],
+  "timestamp": 1781952802131
+}

@@ -1,0 +1,13 @@
+{
+  "network": "testnet",
+  "project": "vindex-vault",
+  "contracts": {
+    "registry": "EQA64zd_Z2k1sAA73yVvLsIY7JmcgrcgGo9GoMyP4HgF9K-J",
+    "reputation": "EQCrhHDlfgDGe5Bg0gQD5GPk6d4_WrHh1X-92tGA-I0ql-9i",
+    "reward_engine": "EQDa_tWHhVlquKVefnFGWsg_i4e9L8bTrZyO3hsw5ncHDmCA",
+    "staking": "EQC3TPLVdWN2MdzWHjg11H-MlK32hbOBzM_uWiakVKzLvpji",
+    "treasury": "EQD5RUjadOpaq2nSO4KMSI23afzU7denH115ccdUejBWWMtu",
+    "jetton_master": "EQBwh4Y_jdNlK3l147ENdV7ybGgRFG6iDRUSjWUDlg-a7cA-"
+  },
+  "status": "deployed_active_testnet"
+}

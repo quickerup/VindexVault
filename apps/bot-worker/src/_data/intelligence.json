@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "r_persist_1781950488339",
+    "title": "persistent test",
+    "description": "test",
+    "reporter": {
+      "id": "u1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 2,
+    "tags": [],
+    "createdAt": 1781950488341,
+    "score": 50,
+    "status": "medium_confidence"
+  },
+  {
+    "id": "r_rep_1781950527650",
+    "title": "reputation test",
+    "description": "test",
+    "reporter": {
+      "id": "user_test",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950527650,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_test",
+      "delta": 6,
+      "reputation": 6
+    }
+  },
+  {
+    "id": "r_reward_1781950561050",
+    "title": "reward test",
+    "description": "test",
+    "reporter": {
+      "id": "user_reward",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950561050,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_reward",
+      "delta": 6,
+      "reputation": 6
+    },
+    "reward": {
+      "id": "rw_1781950561051",
+      "reportId": "r_reward_1781950561050",
+      "userId": "user_reward",
+      "amount": 9,
+      "createdAt": 1781950561051
+    }
+  },
+  {
+    "id": "r_anchor_1781950591265",
+    "title": "anchor test",
+    "description": "test",
+    "reporter": {
+      "id": "user_anchor",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950591265,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_anchor",
+      "delta": 6,
+      "reputation": 6
+    },
+    "reward": {
+      "id": "rw_1781950591267",
+      "reportId": "r_anchor_1781950591265",
+      "userId": "user_anchor",
+      "amount": 9,
+      "createdAt": 1781950591267
+    },
+    "anchor": {
+      "id": "an_1781950591275",
+      "recordId": "r_anchor_1781950591265",
+      "hash": "532bd0aed448bf4d775fb4dc7cd3c7206b84e88e3b88be96498391d1b81fff99",
+      "createdAt": 1781950591275
+    }
+  },
+  {
+    "id": "r_chain_1781950639804",
+    "title": "chain test",
+    "description": "test",
+    "reporter": {
+      "id": "user_chain",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950639804,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_chain",
+      "delta": 6,
+      "reputation": 6
+    },
+    "reward": {
+      "id": "rw_1781950639807",
+      "reportId": "r_chain_1781950639804",
+      "userId": "user_chain",
+      "amount": 9,
+      "createdAt": 1781950639808
+    },
+    "anchor": {
+      "id": "an_1781950639813",
+      "recordId": "r_chain_1781950639804",
+      "hash": "97ef15d33feb1a25c038d3d5df85c45705d81b8692ebb1949008770269f6520b",
+      "createdAt": 1781950639813
+    },
+    "chain": {
+      "id": "cp_1781950639816",
+      "recordId": "r_chain_1781950639804",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_chain_1781950639804",
+          "hash": "97ef15d33feb1a25c038d3d5df85c45705d81b8692ebb1949008770269f6520b",
+          "timestamp": 1781950639816,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781950639816
+    }
+  },
+  {
+    "id": "r_sdk_1781950687629",
+    "title": "sdk test",
+    "description": "test",
+    "reporter": {
+      "id": "user_sdk",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950687629,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_sdk",
+      "delta": 6,
+      "reputation": 6
+    },
+    "reward": {
+      "id": "rw_1781950687634",
+      "reportId": "r_sdk_1781950687629",
+      "userId": "user_sdk",
+      "amount": 9,
+      "createdAt": 1781950687634
+    },
+    "anchor": {
+      "id": "an_1781950687638",
+      "recordId": "r_sdk_1781950687629",
+      "hash": "7c819b272cb29c8873c5ef5d87f43d4a3cbac18b7ff246880b026e1a5f5ed51f",
+      "createdAt": 1781950687638
+    },
+    "chain": {
+      "id": "cp_1781950687641",
+      "recordId": "r_sdk_1781950687629",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_sdk_1781950687629",
+          "hash": "7c819b272cb29c8873c5ef5d87f43d4a3cbac18b7ff246880b026e1a5f5ed51f",
+          "timestamp": 1781950687641,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781950687641
+    }
+  },
+  {
+    "id": "r_graph_1781950752932",
+    "title": "graph test",
+    "description": "test",
+    "reporter": {
+      "id": "user_graph",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "confidence": 3,
+    "tags": [],
+    "createdAt": 1781950752932,
+    "score": 80,
+    "status": "high_confidence",
+    "reputationImpact": {
+      "userId": "user_graph",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781950752935",
+      "reportId": "r_graph_1781950752932",
+      "userId": "user_graph",
+      "amount": 10,
+      "createdAt": 1781950752935
+    },
+    "anchor": {
+      "id": "an_1781950752937",
+      "recordId": "r_graph_1781950752932",
+      "hash": "859cfd11ff5806fa58307199834c2a58b8abfa949697b200b4273d9a0785b584",
+      "createdAt": 1781950752937
+    },
+    "chain": {
+      "id": "cp_1781950752939",
+      "recordId": "r_graph_1781950752932",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_graph_1781950752932",
+          "hash": "859cfd11ff5806fa58307199834c2a58b8abfa949697b200b4273d9a0785b584",
+          "timestamp": 1781950752939,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781950752939
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_graph_1781950752932",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_graph",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_graph",
+          "to": "r_graph_1781950752932",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978842675",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978842675,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978842681",
+      "reportId": "r_1781978842675",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978842681
+    },
+    "anchor": {
+      "id": "an_1781978842686",
+      "recordId": "r_1781978842675",
+      "hash": "c685c4275d5f39deffa8cda3557d5adb2b67fe2a8bfa0413053241ae788eedec",
+      "createdAt": 1781978842686
+    },
+    "chain": {
+      "id": "cp_1781978842689",
+      "recordId": "r_1781978842675",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978842675",
+          "hash": "c685c4275d5f39deffa8cda3557d5adb2b67fe2a8bfa0413053241ae788eedec",
+          "timestamp": 1781978842689,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978842689
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978842675",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978842675",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978879258",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978879258,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978879265",
+      "reportId": "r_1781978879258",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978879265
+    },
+    "anchor": {
+      "id": "an_1781978879271",
+      "recordId": "r_1781978879258",
+      "hash": "74d496fe0acfc94ad857eb24fed0ebc17a178f78dfcbbf3b9c426d5d99fb34b4",
+      "createdAt": 1781978879271
+    },
+    "chain": {
+      "id": "cp_1781978879273",
+      "recordId": "r_1781978879258",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978879258",
+          "hash": "74d496fe0acfc94ad857eb24fed0ebc17a178f78dfcbbf3b9c426d5d99fb34b4",
+          "timestamp": 1781978879273,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978879273
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978879258",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978879258",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_anchor_1781978887955",
+    "title": "anchor test",
+    "description": "test",
+    "reporter": {
+      "id": "user_anchor",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978887955,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_anchor",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781978887958",
+      "reportId": "r_anchor_1781978887955",
+      "userId": "user_anchor",
+      "amount": 10,
+      "createdAt": 1781978887958
+    },
+    "anchor": {
+      "id": "an_1781978887962",
+      "recordId": "r_anchor_1781978887955",
+      "hash": "57e574c79d93c396fce10863f037eb96290ed27cdf942423d02b4f5b5ba2d197",
+      "createdAt": 1781978887962
+    },
+    "chain": {
+      "id": "cp_1781978887979",
+      "recordId": "r_anchor_1781978887955",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_anchor_1781978887955",
+          "hash": "57e574c79d93c396fce10863f037eb96290ed27cdf942423d02b4f5b5ba2d197",
+          "timestamp": 1781978887979,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978887979
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_anchor_1781978887955",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_anchor",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_anchor",
+          "to": "r_anchor_1781978887955",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_chain_1781978888686",
+    "title": "chain test",
+    "description": "test",
+    "reporter": {
+      "id": "user_chain",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978888686,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_chain",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781978888689",
+      "reportId": "r_chain_1781978888686",
+      "userId": "user_chain",
+      "amount": 10,
+      "createdAt": 1781978888689
+    },
+    "anchor": {
+      "id": "an_1781978888695",
+      "recordId": "r_chain_1781978888686",
+      "hash": "498ee3fe9078f0610c302dc4215ac2daaa7f955bc0412f1963d8a95a0f5993eb",
+      "createdAt": 1781978888695
+    },
+    "chain": {
+      "id": "cp_1781978888696",
+      "recordId": "r_chain_1781978888686",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_chain_1781978888686",
+          "hash": "498ee3fe9078f0610c302dc4215ac2daaa7f955bc0412f1963d8a95a0f5993eb",
+          "timestamp": 1781978888696,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978888696
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_chain_1781978888686",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_chain",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_chain",
+          "to": "r_chain_1781978888686",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_graph_1781978889502",
+    "title": "graph test",
+    "description": "test",
+    "reporter": {
+      "id": "user_graph",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978889502,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_graph",
+      "delta": 6,
+      "reputation": 18
+    },
+    "reward": {
+      "id": "rw_1781978889505",
+      "reportId": "r_graph_1781978889502",
+      "userId": "user_graph",
+      "amount": 11,
+      "createdAt": 1781978889505
+    },
+    "anchor": {
+      "id": "an_1781978889509",
+      "recordId": "r_graph_1781978889502",
+      "hash": "6e10e33247e7157328c340dc9c280e264d760ba54880eb1dcfc2e1431b5781b8",
+      "createdAt": 1781978889509
+    },
+    "chain": {
+      "id": "cp_1781978889510",
+      "recordId": "r_graph_1781978889502",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_graph_1781978889502",
+          "hash": "6e10e33247e7157328c340dc9c280e264d760ba54880eb1dcfc2e1431b5781b8",
+          "timestamp": 1781978889510,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978889510
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_graph_1781978889502",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_graph",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_graph",
+          "to": "r_graph_1781978889502",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978890055",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978890056,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978890060",
+      "reportId": "r_1781978890055",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978890060
+    },
+    "anchor": {
+      "id": "an_1781978890062",
+      "recordId": "r_1781978890055",
+      "hash": "ad246ed5cc4ef736209340a0cff0cd73555f181262ba72e0cf4999d3a7f60985",
+      "createdAt": 1781978890062
+    },
+    "chain": {
+      "id": "cp_1781978890063",
+      "recordId": "r_1781978890055",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978890055",
+          "hash": "ad246ed5cc4ef736209340a0cff0cd73555f181262ba72e0cf4999d3a7f60985",
+          "timestamp": 1781978890063,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978890063
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978890055",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978890055",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_test",
+    "title": "test report",
+    "description": "test",
+    "reporter": {
+      "id": "u1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978890935,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "u1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978890938",
+      "reportId": "r_test",
+      "userId": "u1",
+      "amount": 1,
+      "createdAt": 1781978890938
+    },
+    "anchor": {
+      "id": "an_1781978890942",
+      "recordId": "r_test",
+      "hash": "b69a51638fa13cf1f92d00e0d89e8c42dc1c9bc9ab71e2a4fd15097c456d8337",
+      "createdAt": 1781978890942
+    },
+    "chain": {
+      "id": "cp_1781978890943",
+      "recordId": "r_test",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_test",
+          "hash": "b69a51638fa13cf1f92d00e0d89e8c42dc1c9bc9ab71e2a4fd15097c456d8337",
+          "timestamp": 1781978890943,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978890943
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_test",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "u1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "u1",
+          "to": "r_test",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_persist_1781978891995",
+    "title": "persistent test",
+    "description": "test",
+    "reporter": {
+      "id": "u1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781978891995,
+    "score": 50,
+    "status": "medium_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "u1",
+      "delta": 4,
+      "reputation": 4
+    },
+    "reward": {
+      "id": "rw_1781978892040",
+      "reportId": "r_persist_1781978891995",
+      "userId": "u1",
+      "amount": 5,
+      "createdAt": 1781978892040
+    },
+    "anchor": {
+      "id": "an_1781978892044",
+      "recordId": "r_persist_1781978891995",
+      "hash": "938a3822cdcb86b7c5921cdb67dee8608e0f1a9104adfe5fbf397a6cc177c866",
+      "createdAt": 1781978892044
+    },
+    "chain": {
+      "id": "cp_1781978892046",
+      "recordId": "r_persist_1781978891995",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_persist_1781978891995",
+          "hash": "938a3822cdcb86b7c5921cdb67dee8608e0f1a9104adfe5fbf397a6cc177c866",
+          "timestamp": 1781978892046,
+          "confidence": "medium_confidence",
+          "score": 50
+        }
+      },
+      "createdAt": 1781978892047
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_persist_1781978891995",
+          "type": "report",
+          "label": "medium_confidence"
+        },
+        {
+          "id": "u1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "u1",
+          "to": "r_persist_1781978891995",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978893141",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978893141,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978893153",
+      "reportId": "r_1781978893141",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978893153
+    },
+    "anchor": {
+      "id": "an_1781978893162",
+      "recordId": "r_1781978893141",
+      "hash": "a9f18a223b5228607f9ffbc28fd2d0006509a3e7d3d81533c777d2d592107c77",
+      "createdAt": 1781978893162
+    },
+    "chain": {
+      "id": "cp_1781978893164",
+      "recordId": "r_1781978893141",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978893141",
+          "hash": "a9f18a223b5228607f9ffbc28fd2d0006509a3e7d3d81533c777d2d592107c77",
+          "timestamp": 1781978893163,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978893164
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978893141",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978893141",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_anchor_1781978915530",
+    "title": "anchor test",
+    "description": "test",
+    "reporter": {
+      "id": "user_anchor",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978915530,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_anchor",
+      "delta": 6,
+      "reputation": 18
+    },
+    "reward": {
+      "id": "rw_1781978915534",
+      "reportId": "r_anchor_1781978915530",
+      "userId": "user_anchor",
+      "amount": 11,
+      "createdAt": 1781978915534
+    },
+    "anchor": {
+      "id": "an_1781978915539",
+      "recordId": "r_anchor_1781978915530",
+      "hash": "15dd8a0f4b7d7f9fbf207f0a267461b5804063823256bba31f8b89c403112ac3",
+      "createdAt": 1781978915539
+    },
+    "chain": {
+      "id": "cp_1781978915540",
+      "recordId": "r_anchor_1781978915530",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_anchor_1781978915530",
+          "hash": "15dd8a0f4b7d7f9fbf207f0a267461b5804063823256bba31f8b89c403112ac3",
+          "timestamp": 1781978915540,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978915540
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_anchor_1781978915530",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_anchor",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_anchor",
+          "to": "r_anchor_1781978915530",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_chain_1781978916066",
+    "title": "chain test",
+    "description": "test",
+    "reporter": {
+      "id": "user_chain",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978916067,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_chain",
+      "delta": 6,
+      "reputation": 18
+    },
+    "reward": {
+      "id": "rw_1781978916079",
+      "reportId": "r_chain_1781978916066",
+      "userId": "user_chain",
+      "amount": 11,
+      "createdAt": 1781978916079
+    },
+    "anchor": {
+      "id": "an_1781978916084",
+      "recordId": "r_chain_1781978916066",
+      "hash": "d33e548f2b2a175c8e20fb44ba0a982f992a898bf184b62f66d0146331c77e0d",
+      "createdAt": 1781978916084
+    },
+    "chain": {
+      "id": "cp_1781978916086",
+      "recordId": "r_chain_1781978916066",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_chain_1781978916066",
+          "hash": "d33e548f2b2a175c8e20fb44ba0a982f992a898bf184b62f66d0146331c77e0d",
+          "timestamp": 1781978916086,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978916086
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_chain_1781978916066",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_chain",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_chain",
+          "to": "r_chain_1781978916066",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_graph_1781978917028",
+    "title": "graph test",
+    "description": "test",
+    "reporter": {
+      "id": "user_graph",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978917028,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_graph",
+      "delta": 6,
+      "reputation": 24
+    },
+    "reward": {
+      "id": "rw_1781978917032",
+      "reportId": "r_graph_1781978917028",
+      "userId": "user_graph",
+      "amount": 12,
+      "createdAt": 1781978917032
+    },
+    "anchor": {
+      "id": "an_1781978917036",
+      "recordId": "r_graph_1781978917028",
+      "hash": "912e47e62bdfe4b13caffcc1018505a99783c3b2353099ca39a0848ae008922f",
+      "createdAt": 1781978917036
+    },
+    "chain": {
+      "id": "cp_1781978917037",
+      "recordId": "r_graph_1781978917028",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_graph_1781978917028",
+          "hash": "912e47e62bdfe4b13caffcc1018505a99783c3b2353099ca39a0848ae008922f",
+          "timestamp": 1781978917037,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978917037
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_graph_1781978917028",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_graph",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_graph",
+          "to": "r_graph_1781978917028",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978917857",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978917857,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978917864",
+      "reportId": "r_1781978917857",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978917864
+    },
+    "anchor": {
+      "id": "an_1781978917868",
+      "recordId": "r_1781978917857",
+      "hash": "de1dfa4120775f72aa1cd5f0f983fcf340a1066e7aad2df017fcff51a3275633",
+      "createdAt": 1781978917868
+    },
+    "chain": {
+      "id": "cp_1781978917869",
+      "recordId": "r_1781978917857",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978917857",
+          "hash": "de1dfa4120775f72aa1cd5f0f983fcf340a1066e7aad2df017fcff51a3275633",
+          "timestamp": 1781978917869,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978917869
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978917857",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978917857",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_test",
+    "title": "test report",
+    "description": "test",
+    "reporter": {
+      "id": "u1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978918512,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "u1",
+      "delta": 0,
+      "reputation": 4
+    },
+    "reward": null,
+    "anchor": {
+      "id": "an_1781978918519",
+      "recordId": "r_test",
+      "hash": "469cba15c748043b70387c84b1459efb5d12b28a44b53a5269442adf985c2230",
+      "createdAt": 1781978918519
+    },
+    "chain": {
+      "id": "cp_1781978918520",
+      "recordId": "r_test",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_test",
+          "hash": "469cba15c748043b70387c84b1459efb5d12b28a44b53a5269442adf985c2230",
+          "timestamp": 1781978918520,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978918520
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_test",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "u1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "u1",
+          "to": "r_test",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_persist_1781978919261",
+    "title": "persistent test",
+    "description": "test",
+    "reporter": {
+      "id": "u1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781978919261,
+    "score": 50,
+    "status": "medium_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "u1",
+      "delta": 4,
+      "reputation": 8
+    },
+    "reward": {
+      "id": "rw_1781978919264",
+      "reportId": "r_persist_1781978919261",
+      "userId": "u1",
+      "amount": 6,
+      "createdAt": 1781978919264
+    },
+    "anchor": {
+      "id": "an_1781978919267",
+      "recordId": "r_persist_1781978919261",
+      "hash": "abd60722f40a2af825ac19bb6ffcae784926ac67cdbda87d831f056a8965280d",
+      "createdAt": 1781978919267
+    },
+    "chain": {
+      "id": "cp_1781978919268",
+      "recordId": "r_persist_1781978919261",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_persist_1781978919261",
+          "hash": "abd60722f40a2af825ac19bb6ffcae784926ac67cdbda87d831f056a8965280d",
+          "timestamp": 1781978919268,
+          "confidence": "medium_confidence",
+          "score": 50
+        }
+      },
+      "createdAt": 1781978919268
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_persist_1781978919261",
+          "type": "report",
+          "label": "medium_confidence"
+        },
+        {
+          "id": "u1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "u1",
+          "to": "r_persist_1781978919261",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781978919755",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781978919755,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781978919759",
+      "reportId": "r_1781978919755",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781978919759
+    },
+    "anchor": {
+      "id": "an_1781978919766",
+      "recordId": "r_1781978919755",
+      "hash": "4747d6bf71c62f7322dcca83ac7ba4cdafcc20e2f949a98b74d1c0678cc132ce",
+      "createdAt": 1781978919766
+    },
+    "chain": {
+      "id": "cp_1781978919768",
+      "recordId": "r_1781978919755",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781978919755",
+          "hash": "4747d6bf71c62f7322dcca83ac7ba4cdafcc20e2f949a98b74d1c0678cc132ce",
+          "timestamp": 1781978919768,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781978919768
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781978919755",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781978919755",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_rep_1781978920613",
+    "title": "reputation test",
+    "description": "test",
+    "reporter": {
+      "id": "user_test",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978920613,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_test",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781978920619",
+      "reportId": "r_rep_1781978920613",
+      "userId": "user_test",
+      "amount": 10,
+      "createdAt": 1781978920620
+    },
+    "anchor": {
+      "id": "an_1781978920625",
+      "recordId": "r_rep_1781978920613",
+      "hash": "0741701f1fecb8391f0d5ac058138f77966e35a9c5c2f8008d9af988487d05fd",
+      "createdAt": 1781978920625
+    },
+    "chain": {
+      "id": "cp_1781978920633",
+      "recordId": "r_rep_1781978920613",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_rep_1781978920613",
+          "hash": "0741701f1fecb8391f0d5ac058138f77966e35a9c5c2f8008d9af988487d05fd",
+          "timestamp": 1781978920633,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978920633
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_rep_1781978920613",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_test",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_test",
+          "to": "r_rep_1781978920613",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_reward_1781978921424",
+    "title": "reward test",
+    "description": "test",
+    "reporter": {
+      "id": "user_reward",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978921424,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_reward",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781978921429",
+      "reportId": "r_reward_1781978921424",
+      "userId": "user_reward",
+      "amount": 10,
+      "createdAt": 1781978921429
+    },
+    "anchor": {
+      "id": "an_1781978921435",
+      "recordId": "r_reward_1781978921424",
+      "hash": "c20a46cd5bc52bb94e28b5ba92519a87e9af4f04ad6d7e7220bf384a85f93da9",
+      "createdAt": 1781978921435
+    },
+    "chain": {
+      "id": "cp_1781978921436",
+      "recordId": "r_reward_1781978921424",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_reward_1781978921424",
+          "hash": "c20a46cd5bc52bb94e28b5ba92519a87e9af4f04ad6d7e7220bf384a85f93da9",
+          "timestamp": 1781978921436,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978921436
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_reward_1781978921424",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_reward",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_reward",
+          "to": "r_reward_1781978921424",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_sdk_1781978922686",
+    "title": "sdk test",
+    "description": "test",
+    "reporter": {
+      "id": "user_sdk",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 3,
+    "createdAt": 1781978922686,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_sdk",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781978922689",
+      "reportId": "r_sdk_1781978922686",
+      "userId": "user_sdk",
+      "amount": 10,
+      "createdAt": 1781978922689
+    },
+    "anchor": {
+      "id": "an_1781978922692",
+      "recordId": "r_sdk_1781978922686",
+      "hash": "c09986a2941df51ad8bd43b03784917ead6a6a9eabd7886958b9ddad502608cf",
+      "createdAt": 1781978922692
+    },
+    "chain": {
+      "id": "cp_1781978922694",
+      "recordId": "r_sdk_1781978922686",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_sdk_1781978922686",
+          "hash": "c09986a2941df51ad8bd43b03784917ead6a6a9eabd7886958b9ddad502608cf",
+          "timestamp": 1781978922694,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781978922694
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_sdk_1781978922686",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "user_sdk",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_sdk",
+          "to": "r_sdk_1781978922686",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988194037",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988194037,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988194040",
+      "reportId": "r_1781988194037",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988194040
+    },
+    "anchor": {
+      "id": "an_1781988194043",
+      "recordId": "r_1781988194037",
+      "hash": "19dbfd0488013a851a3f715fe7f00b81a49094ac54f02852661bad476a474da4",
+      "createdAt": 1781988194043
+    },
+    "chain": {
+      "id": "cp_1781988194044",
+      "recordId": "r_1781988194037",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988194037",
+          "hash": "19dbfd0488013a851a3f715fe7f00b81a49094ac54f02852661bad476a474da4",
+          "timestamp": 1781988194044,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988194044
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988194037",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988194037",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988198324",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988198324,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988198327",
+      "reportId": "r_1781988198324",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988198327
+    },
+    "anchor": {
+      "id": "an_1781988198329",
+      "recordId": "r_1781988198324",
+      "hash": "78ff48c2bc4a9cecbcac50866067346b8564c85b9dc0b5e01d1f2f9128a1d314",
+      "createdAt": 1781988198329
+    },
+    "chain": {
+      "id": "cp_1781988198330",
+      "recordId": "r_1781988198324",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988198324",
+          "hash": "78ff48c2bc4a9cecbcac50866067346b8564c85b9dc0b5e01d1f2f9128a1d314",
+          "timestamp": 1781988198330,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988198330
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988198324",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988198324",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988335135",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988335135,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988335138",
+      "reportId": "r_1781988335135",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988335138
+    },
+    "anchor": {
+      "id": "an_1781988335140",
+      "recordId": "r_1781988335135",
+      "hash": "1b399d81b2967357013ddd8d2602970d03998e4e6f3b6b98045414b09c6d7f77",
+      "createdAt": 1781988335140
+    },
+    "chain": {
+      "id": "cp_1781988335141",
+      "recordId": "r_1781988335135",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988335135",
+          "hash": "1b399d81b2967357013ddd8d2602970d03998e4e6f3b6b98045414b09c6d7f77",
+          "timestamp": 1781988335141,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988335141
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988335135",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988335135",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988335454",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988335454,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988335457",
+      "reportId": "r_1781988335454",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988335457
+    },
+    "anchor": {
+      "id": "an_1781988335459",
+      "recordId": "r_1781988335454",
+      "hash": "f89229d1c117f5cae80c4f022ab4eea7000b4d6bbf20f781cee2099f71f715ac",
+      "createdAt": 1781988335459
+    },
+    "chain": {
+      "id": "cp_1781988335460",
+      "recordId": "r_1781988335454",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988335454",
+          "hash": "f89229d1c117f5cae80c4f022ab4eea7000b4d6bbf20f781cee2099f71f715ac",
+          "timestamp": 1781988335460,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988335460
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988335454",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988335454",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988391195",
+    "title": "Phishing portal claiming free awards on ...",
+    "description": "Phishing portal claiming free awards on https://scam-tonkeeper-claim.org. Scammer wallet is EQA1234567890123456789012345678901234567_ABCD. Dev handle: @scammer_ton_support",
+    "reporter": {
+      "id": "tg_12345",
+      "type": "telegram_user",
+      "handle": "@alice_test"
+    },
+    "suspects": [
+      {
+        "id": "EQA1234567890123456789012345678901234567_ABCD",
+        "type": "wallet"
+      },
+      {
+        "id": "scam-tonkeeper-claim.org",
+        "type": "domain"
+      },
+      {
+        "id": "@scammer_ton_support",
+        "type": "telegram_user",
+        "handle": "@scammer_ton_support"
+      },
+      {
+        "id": "https://scam-tonkeeper-claim.org.",
+        "type": "mini_app"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_url_1781988391195_0",
+        "type": "url",
+        "uri": "https://scam-tonkeeper-claim.org.",
+        "timestamp": 1781988391195
+      }
+    ],
+    "tags": [
+      "telegram_submission"
+    ],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781988391195,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "tg_12345",
+      "delta": 6,
+      "reputation": 6
+    },
+    "reward": {
+      "id": "rw_1781988391201",
+      "reportId": "r_1781988391195",
+      "userId": "tg_12345",
+      "amount": 9,
+      "createdAt": 1781988391202
+    },
+    "anchor": {
+      "id": "an_1781988391218",
+      "recordId": "r_1781988391195",
+      "hash": "7e93478b1179ceabdcad95cfecaf70d6d668ed6892fa180066bfd95524d5a3c2",
+      "createdAt": 1781988391218
+    },
+    "chain": {
+      "id": "cp_1781988391221",
+      "recordId": "r_1781988391195",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988391195",
+          "hash": "7e93478b1179ceabdcad95cfecaf70d6d668ed6892fa180066bfd95524d5a3c2",
+          "timestamp": 1781988391220,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781988391221
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988391195",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "tg_12345",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tg_12345",
+          "to": "r_1781988391195",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988479764",
+    "title": "Phishing portal claiming free awards on ...",
+    "description": "Phishing portal claiming free awards on https://scam-tonkeeper-claim.org. Scammer wallet is EQA1234567890123456789012345678901234567_ABCD. Dev handle: @scammer_ton_support",
+    "reporter": {
+      "id": "tg_12345",
+      "type": "telegram_user",
+      "handle": "@alice_test"
+    },
+    "suspects": [
+      {
+        "id": "EQA1234567890123456789012345678901234567_ABCD",
+        "type": "wallet"
+      },
+      {
+        "id": "scam-tonkeeper-claim.org",
+        "type": "domain"
+      },
+      {
+        "id": "@scammer_ton_support",
+        "type": "telegram_user",
+        "handle": "@scammer_ton_support"
+      },
+      {
+        "id": "https://scam-tonkeeper-claim.org.",
+        "type": "mini_app"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_url_1781988479763_0",
+        "type": "url",
+        "uri": "https://scam-tonkeeper-claim.org.",
+        "timestamp": 1781988479763
+      }
+    ],
+    "tags": [
+      "telegram_submission"
+    ],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781988479764,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "tg_12345",
+      "delta": 6,
+      "reputation": 12
+    },
+    "reward": {
+      "id": "rw_1781988479769",
+      "reportId": "r_1781988479764",
+      "userId": "tg_12345",
+      "amount": 10,
+      "createdAt": 1781988479769
+    },
+    "anchor": {
+      "id": "an_1781988479775",
+      "recordId": "r_1781988479764",
+      "hash": "0235d64f51808f03300c6f268cbe9af1f3c0081ba38fc3671262a122deb5dd86",
+      "createdAt": 1781988479775
+    },
+    "chain": {
+      "id": "cp_1781988479779",
+      "recordId": "r_1781988479764",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988479764",
+          "hash": "0235d64f51808f03300c6f268cbe9af1f3c0081ba38fc3671262a122deb5dd86",
+          "timestamp": 1781988479779,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781988479779
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988479764",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "tg_12345",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tg_12345",
+          "to": "r_1781988479764",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988483908",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988483909,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988483911",
+      "reportId": "r_1781988483908",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988483911
+    },
+    "anchor": {
+      "id": "an_1781988483913",
+      "recordId": "r_1781988483908",
+      "hash": "80662a99f7e341cb4228a4b88c3898f9c12118bd22d8d361f7b661e9b18d297b",
+      "createdAt": 1781988483913
+    },
+    "chain": {
+      "id": "cp_1781988483914",
+      "recordId": "r_1781988483908",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988483908",
+          "hash": "80662a99f7e341cb4228a4b88c3898f9c12118bd22d8d361f7b661e9b18d297b",
+          "timestamp": 1781988483914,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988483914
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988483908",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988483908",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988484257",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781988484257,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781988484259",
+      "reportId": "r_1781988484257",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781988484259
+    },
+    "anchor": {
+      "id": "an_1781988484261",
+      "recordId": "r_1781988484257",
+      "hash": "b2e54d23ffbe42a7909ea854da26d82300ae32ac8439b2eafe0a855a8104eed9",
+      "createdAt": 1781988484261
+    },
+    "chain": {
+      "id": "cp_1781988484262",
+      "recordId": "r_1781988484257",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988484257",
+          "hash": "b2e54d23ffbe42a7909ea854da26d82300ae32ac8439b2eafe0a855a8104eed9",
+          "timestamp": 1781988484262,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781988484262
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988484257",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781988484257",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781988490686",
+    "title": "Phishing portal claiming free awards on ...",
+    "description": "Phishing portal claiming free awards on https://scam-tonkeeper-claim.org. Scammer wallet is EQA1234567890123456789012345678901234567_ABCD. Dev handle: @scammer_ton_support",
+    "reporter": {
+      "id": "tg_12345",
+      "type": "telegram_user",
+      "handle": "@alice_test"
+    },
+    "suspects": [
+      {
+        "id": "EQA1234567890123456789012345678901234567_ABCD",
+        "type": "wallet"
+      },
+      {
+        "id": "scam-tonkeeper-claim.org",
+        "type": "domain"
+      },
+      {
+        "id": "@scammer_ton_support",
+        "type": "telegram_user",
+        "handle": "@scammer_ton_support"
+      },
+      {
+        "id": "https://scam-tonkeeper-claim.org.",
+        "type": "mini_app"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_url_1781988490685_0",
+        "type": "url",
+        "uri": "https://scam-tonkeeper-claim.org.",
+        "timestamp": 1781988490685
+      }
+    ],
+    "tags": [
+      "telegram_submission"
+    ],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781988490686,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "tg_12345",
+      "delta": 6,
+      "reputation": 18
+    },
+    "reward": {
+      "id": "rw_1781988490687",
+      "reportId": "r_1781988490686",
+      "userId": "tg_12345",
+      "amount": 11,
+      "createdAt": 1781988490687
+    },
+    "anchor": {
+      "id": "an_1781988490689",
+      "recordId": "r_1781988490686",
+      "hash": "b0d86bbff6c0517ba6d68dddf5c6119f62d261438d500e621f25fd1d0284264e",
+      "createdAt": 1781988490689
+    },
+    "chain": {
+      "id": "cp_1781988490691",
+      "recordId": "r_1781988490686",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781988490686",
+          "hash": "b0d86bbff6c0517ba6d68dddf5c6119f62d261438d500e621f25fd1d0284264e",
+          "timestamp": 1781988490691,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781988490691
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781988490686",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "tg_12345",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tg_12345",
+          "to": "r_1781988490686",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781993958562",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781993958562,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781993958567",
+      "reportId": "r_1781993958562",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781993958567
+    },
+    "anchor": {
+      "id": "an_1781993958571",
+      "recordId": "r_1781993958562",
+      "hash": "d572b7f85203281e310a89ddc814f80f578ebac2267e35f6de383b1bf9230dbd",
+      "createdAt": 1781993958571
+    },
+    "chain": {
+      "id": "cp_1781993958575",
+      "recordId": "r_1781993958562",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781993958562",
+          "hash": "d572b7f85203281e310a89ddc814f80f578ebac2267e35f6de383b1bf9230dbd",
+          "timestamp": 1781993958575,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781993958575
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781993958562",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781993958562",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781993959072",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1781993959072,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1781993959076",
+      "reportId": "r_1781993959072",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1781993959076
+    },
+    "anchor": {
+      "id": "an_1781993959083",
+      "recordId": "r_1781993959072",
+      "hash": "f016f24c0bc7022ee84b0b32b30ad28d4e5750326f99b819c7722da09a290c9d",
+      "createdAt": 1781993959083
+    },
+    "chain": {
+      "id": "cp_1781993959085",
+      "recordId": "r_1781993959072",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781993959072",
+          "hash": "f016f24c0bc7022ee84b0b32b30ad28d4e5750326f99b819c7722da09a290c9d",
+          "timestamp": 1781993959085,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1781993959085
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781993959072",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1781993959072",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1781993968313",
+    "title": "Phishing portal claiming free awards on ...",
+    "description": "Phishing portal claiming free awards on https://scam-tonkeeper-claim.org. Scammer wallet is EQA1234567890123456789012345678901234567_ABCD. Dev handle: @scammer_ton_support",
+    "reporter": {
+      "id": "tg_12345",
+      "type": "telegram_user",
+      "handle": "@alice_test"
+    },
+    "suspects": [
+      {
+        "id": "EQA1234567890123456789012345678901234567_ABCD",
+        "type": "wallet"
+      },
+      {
+        "id": "scam-tonkeeper-claim.org",
+        "type": "domain"
+      },
+      {
+        "id": "@scammer_ton_support",
+        "type": "telegram_user",
+        "handle": "@scammer_ton_support"
+      },
+      {
+        "id": "https://scam-tonkeeper-claim.org.",
+        "type": "mini_app"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_url_1781993968313_0",
+        "type": "url",
+        "uri": "https://scam-tonkeeper-claim.org.",
+        "timestamp": 1781993968313
+      }
+    ],
+    "tags": [
+      "telegram_submission"
+    ],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1781993968313,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "tg_12345",
+      "delta": 6,
+      "reputation": 24
+    },
+    "reward": {
+      "id": "rw_1781993968316",
+      "reportId": "r_1781993968313",
+      "userId": "tg_12345",
+      "amount": 12,
+      "createdAt": 1781993968316
+    },
+    "anchor": {
+      "id": "an_1781993968318",
+      "recordId": "r_1781993968313",
+      "hash": "af8a42e2529df31b2dbd896efe7984867cfb5ca8eb4fabe44da093b825cb55fb",
+      "createdAt": 1781993968318
+    },
+    "chain": {
+      "id": "cp_1781993968320",
+      "recordId": "r_1781993968313",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1781993968313",
+          "hash": "af8a42e2529df31b2dbd896efe7984867cfb5ca8eb4fabe44da093b825cb55fb",
+          "timestamp": 1781993968320,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1781993968320
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1781993968313",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "tg_12345",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tg_12345",
+          "to": "r_1781993968313",
+          "type": "reported"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,204 @@
+// automatically generated from `@stdlib/std/stdlib.fc` `/data/data/com.termux/files/home/vindex-vault/apps/contracts/contracts/economics/reward_engine.tact_RewardEngine.fc` 
+PROGRAM{
+  DECLPROC $RewardEngine$_store
+  DECLPROC $RewardEngine$_load
+  DECLPROC $RewardEngine$init$_load
+  DECLPROC $RewardEngine$_contract_init
+  DECLPROC $RewardEngine$_contract_load
+  DECLPROC $RewardEngine$_contract_store
+  DECLPROC $RewardEngine$_fun_owner
+  DECLPROC $RewardEngine$_fun_rewardRate
+  DECLPROC $RewardEngine$_fun_accrued
+  83229 DECLMETHOD %owner
+  90141 DECLMETHOD %rewardRate
+  76181 DECLMETHOD %accrued
+  DECLPROC recv_internal
+  65535 DECLMETHOD __tact_selector_hack
+  DECLGLOBVAR __tact_context
+  DECLGLOBVAR __tact_context_sender
+  DECLGLOBVAR __tact_child_contract_codes
+  DECLGLOBVAR __tact_randomized
+  $RewardEngine$_store PROCINLINE:<{
+    s2 s3 XCHG2
+    STSLICE
+    257 PUSHINT
+    STIX
+    257 PUSHINT
+    STIX
+  }>
+  $RewardEngine$_load PROCINLINE:<{
+    LDMSGADDR
+    257 PUSHINT
+    LDIX
+    257 PUSHINT
+    LDIX
+    3 -ROLL
+  }>
+  $RewardEngine$init$_load PROCINLINE:<{
+    LDMSGADDR
+    SWAP
+  }>
+  $RewardEngine$_contract_init PROCINLINE:<{
+    1 PUSHINT
+    0 PUSHINT
+  }>
+  $RewardEngine$_contract_load PROCINLINE:<{
+    c4 PUSH
+    CTOS
+    1 LDI
+    SWAP
+    IF:<{
+      $RewardEngine$_load INLINECALLDICT
+      1 3 BLKDROP2
+    }>ELSE<{
+      $RewardEngine$init$_load INLINECALLDICT
+      SWAP
+      ENDS
+      $RewardEngine$_contract_init INLINECALLDICT
+    }>
+  }>
+  $RewardEngine$_contract_store PROCINLINE:<{
+    NEWC
+    TRUE
+    SWAP
+    1 STI
+    3 -ROLL
+    $RewardEngine$_store INLINECALLDICT
+    ENDC
+    c4 POP
+  }>
+  $RewardEngine$_fun_owner PROCREF:<{
+    s2 PUSH
+  }>
+  $RewardEngine$_fun_rewardRate PROCREF:<{
+    OVER
+  }>
+  $RewardEngine$_fun_accrued PROCREF:<{
+    DUP
+  }>
+  %owner PROC:<{
+    $RewardEngine$_contract_load INLINECALLDICT
+    $RewardEngine$_fun_owner INLINECALLDICT
+    3 1 BLKDROP2
+  }>
+  %rewardRate PROC:<{
+    $RewardEngine$_contract_load INLINECALLDICT
+    $RewardEngine$_fun_rewardRate INLINECALLDICT
+    3 1 BLKDROP2
+  }>
+  %accrued PROC:<{
+    $RewardEngine$_contract_load INLINECALLDICT
+    $RewardEngine$_fun_accrued INLINECALLDICT
+    3 1 BLKDROP2
+  }>
+  recv_internal PROC:<{
+    SWAP
+    CTOS
+    2 PUSHINT
+    SDSKIPFIRST
+    1 LDI
+    1 LDI
+    LDMSGADDR
+    OVER
+    s3 s4 XCHG
+    s6 s6 XCHG2
+    4 TUPLE
+    __tact_context SETGLOB
+    s0 s2 XCHG
+    __tact_context_sender SETGLOB
+    $RewardEngine$_contract_load INLINECALLDICT
+    s0 s4 XCHG
+    IFJMP:<{
+      4 BLKDROP
+    }>
+    s2 PUSH
+    SBITS
+    31 GTINT
+    IF:<{
+      s0 s2 XCHG
+      32 LDU
+      NIP
+      s0 s2 XCHG
+    }>
+    s0 s2 XCHG
+    HASHSU
+    78742554639484816003951205226153793061731450271978629069781754908241798262465 PUSHINT
+    EQUAL
+    IFJMP:<{
+      s2 s1 XCPU
+      ADD
+      $RewardEngine$_contract_store INLINECALLDICT
+    }>
+    3 BLKDROP
+    130 THROW
+  }>
+  __tact_selector_hack PROC:<{
+    @atend @ 1 {
+            execute current@ context@ current!
+            {
+                // The core idea of this function is to save gas by avoiding unnecessary dict jump, when recv_internal/recv_external is called
+                // We want to extract recv_internal/recv_external from the dict and select needed function
+                // not by jumping to the needed function by it's index, but by using usual IF statements.
+                }END> b> // Close previous builder, now we have a cell of previous code on top of the stack
+                <{ // Start of the new code builder
+                    SETCP0
+                    // Swap the new code builder with the previous code, now we have previous code on top of the stack
+                    swap
+                    // Transform cell to slice and load first ref from the previous code, now we have the dict on top of the stack
+                    <s ref@
+                    // Extract the recv_internal from the dict
+                    dup 0 swap @procdictkeylen idict@ { "internal shortcut error" abort } ifnot
+                    swap
+                    // Delete the recv_internal from the dict
+                    0 swap @procdictkeylen idict- drop
+                    // Delete the recv_external from the dict (it's okay if it's not there)
+                    -1 swap @procdictkeylen idict- drop
+                    // Delete the __tact_selector_hack from the dict
+                    65535 swap @procdictkeylen idict- drop
+                    // Bring the code builder from the bottom of the stack
+                    // because if recv_external extraction is optional, and the number of elements on the stack is not fixed
+                    depth 1- roll
+                    // Swap with the dict from which we extracted recv_internal and (maybe) recv_external
+                    swap
+                    // Check if the dict is empty
+                    dup null?
+                    // Store a copy of this flag in the bottom of the stack
+                    dup depth 1- -roll
+                    {
+                        // If the dict is empty, just drop it (it will be null if it's empty)
+                        drop
+                    }
+                    {
+                        // If the dict is not empty, prepare continuation to be stored in c3
+                        <{
+                            // Save this dict as first ref in this continuation, it will be pushed in runtime by DICTPUSHCONST
+                            swap @procdictkeylen DICTPUSHCONST
+                            // Jump to the needed function by it's index
+                            DICTIGETJMPZ
+                            // If such key is not found, throw 11 along with the key as an argument
+                            11 THROWARG
+                        }> PUSHCONT
+                        // Store the continuation in c3
+                        c3 POP
+                    } cond
+                    // Function id is on top of the (runtime) stack
+                    DUP IFNOTJMP:<{
+                        // place recv_internal here
+                        DROP swap @addop
+                    }>
+                    // Bring back the flag, indicating if the dict is empty or not from the bottom of the stack
+                    depth 1- roll
+                    {
+                        // If the dict is empty, throw 11
+                        11 THROWARG
+                    }
+                    {
+                        // If the dict is not empty, jump to continuation from c3
+                        c3 PUSH JMPX
+                    } cond
+                }> b>
+            } : }END>c
+            current@ context! current!
+        } does @atend !
+  }>
+}END>c

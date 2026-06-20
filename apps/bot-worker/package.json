@@ -1,0 +1,11 @@
+{
+  "name": "bot-worker",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "node src/index.test.js && node src/pipeline.test.js",
+    "test:ts": "node ../../node_modules/ts-node/dist/bin.js src/index.test.ts",
+    "test:all": "npm run test && npm run test:ts"
+  }
+}

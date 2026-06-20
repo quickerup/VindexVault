@@ -1,0 +1,119 @@
+// automatically generated from `@stdlib/std/stdlib.fc` `/data/data/com.termux/files/home/vindex-vault/apps/contracts/output/jetton_wallet_JettonWallet.fc` 
+PROGRAM{
+  DECLPROC $JettonWallet$_store
+  DECLPROC $JettonWallet$_load
+  DECLPROC $JettonWallet$init$_load
+  DECLPROC $JettonWallet$_contract_init
+  DECLPROC $JettonWallet$_contract_load
+  DECLPROC $JettonWallet$_contract_store
+  DECLPROC $JettonWallet$_fun_owner
+  DECLPROC $JettonWallet$_fun_balance
+  83229 DECLMETHOD %owner
+  104128 DECLMETHOD %balance
+  DECLPROC recv_internal
+  DECLGLOBVAR __tact_context
+  DECLGLOBVAR __tact_context_sender
+  DECLGLOBVAR __tact_child_contract_codes
+  DECLGLOBVAR __tact_randomized
+  $JettonWallet$_store PROCINLINE:<{
+    s0 s2 XCHG
+    STSLICE
+    257 PUSHINT
+    STIX
+  }>
+  $JettonWallet$_load PROCINLINE:<{
+    LDMSGADDR
+    257 PUSHINT
+    LDIX
+    -ROT
+  }>
+  $JettonWallet$init$_load PROCINLINE:<{
+    LDMSGADDR
+    SWAP
+  }>
+  $JettonWallet$_contract_init PROCINLINE:<{
+    0 PUSHINT
+  }>
+  $JettonWallet$_contract_load PROCINLINE:<{
+    c4 PUSH
+    CTOS
+    1 LDI
+    SWAP
+    IF:<{
+      $JettonWallet$_load INLINECALLDICT
+      1 2 BLKDROP2
+    }>ELSE<{
+      $JettonWallet$init$_load INLINECALLDICT
+      SWAP
+      ENDS
+      $JettonWallet$_contract_init INLINECALLDICT
+    }>
+  }>
+  $JettonWallet$_contract_store PROCINLINE:<{
+    NEWC
+    TRUE
+    SWAP
+    1 STI
+    -ROT
+    $JettonWallet$_store INLINECALLDICT
+    ENDC
+    c4 POP
+  }>
+  $JettonWallet$_fun_owner PROCREF:<{
+    OVER
+  }>
+  $JettonWallet$_fun_balance PROCREF:<{
+    DUP
+  }>
+  %owner PROC:<{
+    $JettonWallet$_contract_load INLINECALLDICT
+    $JettonWallet$_fun_owner INLINECALLDICT
+    2 1 BLKDROP2
+  }>
+  %balance PROC:<{
+    $JettonWallet$_contract_load INLINECALLDICT
+    $JettonWallet$_fun_balance INLINECALLDICT
+    2 1 BLKDROP2
+  }>
+  recv_internal PROC:<{
+    SWAP
+    CTOS
+    2 PUSHINT
+    SDSKIPFIRST
+    1 LDI
+    1 LDI
+    LDMSGADDR
+    OVER
+    s3 s4 XCHG
+    s6 s6 XCHG2
+    4 TUPLE
+    __tact_context SETGLOB
+    s0 s2 XCHG
+    __tact_context_sender SETGLOB
+    $JettonWallet$_contract_load INLINECALLDICT
+    s0 s3 XCHG
+    IFJMP:<{
+      3 BLKDROP
+    }>
+    OVER
+    SBITS
+    31 GTINT
+    IF:<{
+      SWAP
+      32 LDU
+      NIP
+      SWAP
+    }>
+    SWAP
+    HASHSU
+    46507379562785834456420742240601270667861570636961160522936642252294995687967 PUSHINT
+    EQUAL
+    IFJMP:<{
+      SWAP
+      INC
+      $JettonWallet$_contract_store INLINECALLDICT
+    }>
+    2DROP
+    130 THROW
+  }>
+}END>c

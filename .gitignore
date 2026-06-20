@@ -1,0 +1,12 @@
+node_modules/
+.env
+dist/
+build/
+.turbo/
+.next/
+*.log
+*.zip
+boc-index.json
+deployments.final.json
+vindex_deployment_receipt.json
+vindex_safe_deploy_receipt.json

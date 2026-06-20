@@ -1,0 +1,53 @@
+{
+  "$schema": "http://raw.githubusercontent.com/tact-lang/tact/main/src/config/configSchema.json",
+  "projects": [
+    {
+      "name": "registry",
+      "path": "./contracts/core/registry.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "reputation",
+      "path": "./contracts/core/reputation.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "reward_engine",
+      "path": "./contracts/economics/reward_engine.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "staking",
+      "path": "./contracts/economics/staking.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "treasury",
+      "path": "./contracts/economics/treasury.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "jetton_master",
+      "path": "./contracts/token/jetton_master.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "jetton_wallet",
+      "path": "./contracts/token/jetton_wallet.tact",
+      "output": "./output",
+      "mode": "full"
+    },
+    {
+      "name": "messages",
+      "path": "./contracts/messages.tact",
+      "output": "./output",
+      "mode": "full"
+    }
+  ]
+}

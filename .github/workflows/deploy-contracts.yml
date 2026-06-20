@@ -1,0 +1,63 @@
+name: Deploy Contracts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/contracts/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'apps/contracts/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          cd apps/contracts
+          npm ci
+
+      - name: Compile Tact contracts
+        run: |
+          cd apps/contracts
+          npx tact --check
+
+  deploy-testnet:
+    needs: compile-and-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: testnet
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          cd apps/contracts
+          npm ci
+
+      - name: Deploy to TON testnet
+        env:
+          DEPLOYER_MNEMONIC: ${{ secrets.TESTNET_DEPLOYER_MNEMONIC }}
+        run: |
+          cd apps/contracts
+          npx blueprint deploy --testnet --mnemonic "$DEPLOYER_MNEMONIC"

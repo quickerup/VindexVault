@@ -1,0 +1,25 @@
+
+/**
+ * VindexVault Canonical Threat Intelligence Contract
+ * This is the ONLY valid output shape of the system
+ */
+
+function createIntelligenceRecord({ report, score, status }) {
+  return {
+    id: report.id,
+    title: report.title,
+    description: report.description,
+    reporter: report.reporter,
+    suspects: report.suspects,
+    evidence: report.evidence,
+    confidence: report.confidence,
+    tags: report.tags,
+    createdAt: report.createdAt,
+
+    // derived fields
+    score,
+    status
+  };
+}
+
+module.exports = { createIntelligenceRecord };

@@ -1,0 +1,13 @@
+{
+  "timestamp": 1781977781923,
+  "boc": {
+    "registry": true,
+    "reputation": true,
+    "reward_engine": true,
+    "staking": true,
+    "treasury": true,
+    "jetton_master": true
+  },
+  "deployed": {},
+  "integrity": {}
+}

@@ -1,0 +1,391 @@
+{
+  "nodes": [
+    {
+      "id": "r_graph_1781950752932",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_graph",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_1781978842675",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "user_1",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_1781978879258",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_anchor_1781978887955",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_anchor",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_chain_1781978888686",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_chain",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_graph_1781978889502",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "r_1781978890055",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_test",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "u1",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_persist_1781978891995",
+      "type": "report",
+      "label": "medium_confidence"
+    },
+    {
+      "id": "r_1781978893141",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_anchor_1781978915530",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "r_chain_1781978916066",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "r_graph_1781978917028",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "r_1781978917857",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_persist_1781978919261",
+      "type": "report",
+      "label": "medium_confidence"
+    },
+    {
+      "id": "r_1781978919755",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_rep_1781978920613",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_test",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_reward_1781978921424",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_reward",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_sdk_1781978922686",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "user_sdk",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_1781988194037",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988198324",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988335135",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988335454",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988391195",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "tg_12345",
+      "type": "actor",
+      "label": "reporter"
+    },
+    {
+      "id": "r_1781988479764",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "@scammer_ton_support",
+      "type": "actor",
+      "label": "actor"
+    },
+    {
+      "id": "EQA1234567890123456789012345678901234567_ABCD",
+      "type": "actor",
+      "label": "actor"
+    },
+    {
+      "id": "r_1781988483908",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988484257",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781988490686",
+      "type": "report",
+      "label": "high_confidence"
+    },
+    {
+      "id": "r_1781993958562",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781993959072",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1781993968313",
+      "type": "report",
+      "label": "high_confidence"
+    }
+  ],
+  "edges": [
+    {
+      "from": "user_graph",
+      "to": "r_graph_1781950752932",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978842675",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978879258",
+      "type": "reported"
+    },
+    {
+      "from": "user_anchor",
+      "to": "r_anchor_1781978887955",
+      "type": "reported"
+    },
+    {
+      "from": "user_chain",
+      "to": "r_chain_1781978888686",
+      "type": "reported"
+    },
+    {
+      "from": "user_graph",
+      "to": "r_graph_1781978889502",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978890055",
+      "type": "reported"
+    },
+    {
+      "from": "u1",
+      "to": "r_test",
+      "type": "reported"
+    },
+    {
+      "from": "u1",
+      "to": "r_persist_1781978891995",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978893141",
+      "type": "reported"
+    },
+    {
+      "from": "user_anchor",
+      "to": "r_anchor_1781978915530",
+      "type": "reported"
+    },
+    {
+      "from": "user_chain",
+      "to": "r_chain_1781978916066",
+      "type": "reported"
+    },
+    {
+      "from": "user_graph",
+      "to": "r_graph_1781978917028",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978917857",
+      "type": "reported"
+    },
+    {
+      "from": "u1",
+      "to": "r_test",
+      "type": "reported"
+    },
+    {
+      "from": "u1",
+      "to": "r_persist_1781978919261",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781978919755",
+      "type": "reported"
+    },
+    {
+      "from": "user_test",
+      "to": "r_rep_1781978920613",
+      "type": "reported"
+    },
+    {
+      "from": "user_reward",
+      "to": "r_reward_1781978921424",
+      "type": "reported"
+    },
+    {
+      "from": "user_sdk",
+      "to": "r_sdk_1781978922686",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988194037",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988198324",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988335135",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988335454",
+      "type": "reported"
+    },
+    {
+      "from": "tg_12345",
+      "to": "r_1781988391195",
+      "type": "reported"
+    },
+    {
+      "from": "tg_12345",
+      "to": "r_1781988479764",
+      "type": "reported"
+    },
+    {
+      "from": "@scammer_ton_support",
+      "to": "EQA1234567890123456789012345678901234567_ABCD",
+      "type": "controls"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988483908",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781988484257",
+      "type": "reported"
+    },
+    {
+      "from": "tg_12345",
+      "to": "r_1781988490686",
+      "type": "reported"
+    },
+    {
+      "from": "@scammer_ton_support",
+      "to": "EQA1234567890123456789012345678901234567_ABCD",
+      "type": "controls"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781993958562",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1781993959072",
+      "type": "reported"
+    },
+    {
+      "from": "tg_12345",
+      "to": "r_1781993968313",
+      "type": "reported"
+    },
+    {
+      "from": "@scammer_ton_support",
+      "to": "EQA1234567890123456789012345678901234567_ABCD",
+      "type": "controls"
+    }
+  ]
+}
