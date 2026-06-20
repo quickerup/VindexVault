@@ -9,7 +9,7 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "moduleResolution": "node",
-    "ignoreDeprecations": "5107"
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*.ts"]
 }
