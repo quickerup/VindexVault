@@ -1,16 +1,20 @@
-
 const fs = require("fs");
 const path = require("path");
 
-const INTEL_PATH = path.join(__dirname, "../_data/intelligence.json");
-const CHAIN_PATH = path.join(__dirname, "../_data/chain_packets.json");
+const dirName = typeof __dirname !== "undefined" ? __dirname : ".";
+const INTEL_PATH = path.join(dirName, "../_data/intelligence.json");
+const CHAIN_PATH = path.join(dirName, "../_data/chain_packets.json");
 
 /**
  * SAFE LOADERS
  */
 function load(file) {
-  if (!fs.existsSync(file)) return [];
-  return JSON.parse(fs.readFileSync(file, "utf8"));
+  try {
+    if (fs.existsSync && fs.existsSync(file)) {
+      return JSON.parse(fs.readFileSync(file, "utf8"));
+    }
+  } catch (e) {}
+  return [];
 }
 
 /**

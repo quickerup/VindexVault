@@ -292,5 +292,26 @@
     "userId": "tg_12345",
     "amount": 15,
     "createdAt": 1782001251006
+  },
+  {
+    "id": "rw_1782002122902",
+    "reportId": "r_1782002122899",
+    "userId": "user_1",
+    "amount": 1,
+    "createdAt": 1782002122902
+  },
+  {
+    "id": "rw_1782002123276",
+    "reportId": "r_1782002123273",
+    "userId": "user_1",
+    "amount": 1,
+    "createdAt": 1782002123276
+  },
+  {
+    "id": "rw_1782002130896",
+    "reportId": "r_1782002130892",
+    "userId": "tg_12345",
+    "amount": 16,
+    "createdAt": 1782002130896
   }
 ]

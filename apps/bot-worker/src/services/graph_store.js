@@ -1,23 +1,38 @@
-
 const fs = require("fs");
 const path = require("path");
 
-const DB_PATH = path.join(__dirname, "../_data/graph.json");
+let memoryDb = { nodes: [], edges: [] };
+
+const dirName = typeof __dirname !== "undefined" ? __dirname : ".";
+const DB_PATH = path.join(dirName, "../_data/graph.json");
 
 function ensure() {
-  const dir = path.dirname(DB_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ nodes: [], edges: [] }, null, 2), "utf8");
+  try {
+    const dir = path.dirname(DB_PATH);
+    if (fs.existsSync && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    if (fs.existsSync && !fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ nodes: [], edges: [] }, null, 2), "utf8");
+  } catch (e) {}
 }
 
 function load() {
   ensure();
-  return JSON.parse(fs.readFileSync(DB_PATH, "utf8"));
+  try {
+    if (fs.readFileSync) {
+      return JSON.parse(fs.readFileSync(DB_PATH, "utf8"));
+    }
+  } catch (e) {}
+  return memoryDb;
 }
 
 function save(data) {
   ensure();
-  fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), "utf8");
+  try {
+    if (fs.writeFileSync) {
+      fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), "utf8");
+      return;
+    }
+  } catch (e) {}
+  memoryDb = data;
 }
 
 function addNode(node) {
