@@ -1,5 +1,6 @@
 {
   "name": "bot-worker",
   "main": "src/index.ts",
-  "compatibility_date": "2024-01-01"
+  "compatibility_date": "2024-01-01",
+  "account_id": "2e460f3d9d4d4a2a2731d86e3ff1bea8"
 }
