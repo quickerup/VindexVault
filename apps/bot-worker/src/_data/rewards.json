@@ -250,5 +250,26 @@
     "userId": "tg_12345",
     "amount": 12,
     "createdAt": 1781993968316
+  },
+  {
+    "id": "rw_1782000813705",
+    "reportId": "r_1782000813701",
+    "userId": "user_1",
+    "amount": 1,
+    "createdAt": 1782000813705
+  },
+  {
+    "id": "rw_1782000814048",
+    "reportId": "r_1782000814046",
+    "userId": "user_1",
+    "amount": 1,
+    "createdAt": 1782000814048
+  },
+  {
+    "id": "rw_1782000822911",
+    "reportId": "r_1782000822907",
+    "userId": "tg_12345",
+    "amount": 14,
+    "createdAt": 1782000822911
   }
 ]

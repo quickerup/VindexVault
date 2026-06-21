@@ -209,6 +209,21 @@
       "id": "r_1781993968313",
       "type": "report",
       "label": "high_confidence"
+    },
+    {
+      "id": "r_1782000813701",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1782000814046",
+      "type": "report",
+      "label": "low_confidence"
+    },
+    {
+      "id": "r_1782000822907",
+      "type": "report",
+      "label": "high_confidence"
     }
   ],
   "edges": [
@@ -380,6 +395,26 @@
     {
       "from": "tg_12345",
       "to": "r_1781993968313",
+      "type": "reported"
+    },
+    {
+      "from": "@scammer_ton_support",
+      "to": "EQA1234567890123456789012345678901234567_ABCD",
+      "type": "controls"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1782000813701",
+      "type": "reported"
+    },
+    {
+      "from": "user_1",
+      "to": "r_1782000814046",
+      "type": "reported"
+    },
+    {
+      "from": "tg_12345",
+      "to": "r_1782000822907",
       "type": "reported"
     },
     {

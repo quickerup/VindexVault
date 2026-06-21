@@ -2758,5 +2758,264 @@
         }
       ]
     }
+  },
+  {
+    "id": "r_1782000813701",
+    "title": "phishing fake bot support",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1782000813701,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1782000813705",
+      "reportId": "r_1782000813701",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1782000813705
+    },
+    "anchor": {
+      "id": "an_1782000813708",
+      "recordId": "r_1782000813701",
+      "hash": "555ecab8ce3d0a614cde98c006ee90b4fc1efd5ce98726af2c41966240a5a614",
+      "createdAt": 1782000813708
+    },
+    "chain": {
+      "id": "cp_1782000813711",
+      "recordId": "r_1782000813701",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1782000813701",
+          "hash": "555ecab8ce3d0a614cde98c006ee90b4fc1efd5ce98726af2c41966240a5a614",
+          "timestamp": 1782000813711,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1782000813711
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1782000813701",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1782000813701",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1782000814046",
+    "title": "fake phishing telegram support bot",
+    "description": "auto-generated report",
+    "reporter": {
+      "id": "user_1",
+      "type": "telegram_user"
+    },
+    "suspects": [],
+    "evidence": [],
+    "tags": [],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 0,
+    "createdAt": 1782000814046,
+    "score": 10,
+    "status": "low_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "user_1",
+      "delta": 0,
+      "reputation": 0
+    },
+    "reward": {
+      "id": "rw_1782000814048",
+      "reportId": "r_1782000814046",
+      "userId": "user_1",
+      "amount": 1,
+      "createdAt": 1782000814048
+    },
+    "anchor": {
+      "id": "an_1782000814050",
+      "recordId": "r_1782000814046",
+      "hash": "de843b407880ad597b906c224831334a1cae4766e038a9fcc402ae254820c137",
+      "createdAt": 1782000814050
+    },
+    "chain": {
+      "id": "cp_1782000814051",
+      "recordId": "r_1782000814046",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1782000814046",
+          "hash": "de843b407880ad597b906c224831334a1cae4766e038a9fcc402ae254820c137",
+          "timestamp": 1782000814051,
+          "confidence": "low_confidence",
+          "score": 10
+        }
+      },
+      "createdAt": 1782000814051
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1782000814046",
+          "type": "report",
+          "label": "low_confidence"
+        },
+        {
+          "id": "user_1",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "user_1",
+          "to": "r_1782000814046",
+          "type": "reported"
+        }
+      ]
+    }
+  },
+  {
+    "id": "r_1782000822907",
+    "title": "Phishing portal claiming free awards on ...",
+    "description": "Phishing portal claiming free awards on https://scam-tonkeeper-claim.org. Scammer wallet is EQA1234567890123456789012345678901234567_ABCD. Dev handle: @scammer_ton_support",
+    "reporter": {
+      "id": "tg_12345",
+      "type": "telegram_user",
+      "handle": "@alice_test"
+    },
+    "suspects": [
+      {
+        "id": "EQA1234567890123456789012345678901234567_ABCD",
+        "type": "wallet"
+      },
+      {
+        "id": "scam-tonkeeper-claim.org",
+        "type": "domain"
+      },
+      {
+        "id": "@scammer_ton_support",
+        "type": "telegram_user",
+        "handle": "@scammer_ton_support"
+      },
+      {
+        "id": "https://scam-tonkeeper-claim.org.",
+        "type": "mini_app"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_url_1782000822907_0",
+        "type": "url",
+        "uri": "https://scam-tonkeeper-claim.org.",
+        "timestamp": 1782000822907
+      }
+    ],
+    "tags": [
+      "telegram_submission"
+    ],
+    "wallets": [],
+    "telegrams": [],
+    "domains": [],
+    "urls": [],
+    "contracts": [],
+    "hashes": [],
+    "confidence": 2,
+    "createdAt": 1782000822907,
+    "score": 80,
+    "status": "high_confidence",
+    "intelligenceVersion": 2,
+    "reputationImpact": {
+      "userId": "tg_12345",
+      "delta": 6,
+      "reputation": 30
+    },
+    "reward": {
+      "id": "rw_1782000822911",
+      "reportId": "r_1782000822907",
+      "userId": "tg_12345",
+      "amount": 14,
+      "createdAt": 1782000822911
+    },
+    "anchor": {
+      "id": "an_1782000822914",
+      "recordId": "r_1782000822907",
+      "hash": "b1c1d28ecd0f87e2a7364f5c24f8f7a4533c16f7739e063ef79d842de747b9eb",
+      "createdAt": 1782000822914
+    },
+    "chain": {
+      "id": "cp_1782000822916",
+      "recordId": "r_1782000822907",
+      "packet": {
+        "op": "REGISTER_INTEL",
+        "payload": {
+          "recordId": "r_1782000822907",
+          "hash": "b1c1d28ecd0f87e2a7364f5c24f8f7a4533c16f7739e063ef79d842de747b9eb",
+          "timestamp": 1782000822916,
+          "confidence": "high_confidence",
+          "score": 80
+        }
+      },
+      "createdAt": 1782000822916
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "r_1782000822907",
+          "type": "report",
+          "label": "high_confidence"
+        },
+        {
+          "id": "tg_12345",
+          "type": "actor",
+          "label": "reporter"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tg_12345",
+          "to": "r_1782000822907",
+          "type": "reported"
+        }
+      ]
+    }
   }
 ]
